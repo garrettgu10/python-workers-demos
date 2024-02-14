@@ -1,6 +1,4 @@
-from js import Response, Ai
-from hello import hello
+from js import Response
 
 async def fetch(request):
-    name = (await request.json()).name
-    return Response.new(hello(name))
+    return Response.new("Hello world!")
