@@ -1,11 +1,9 @@
 from js import Response
 from langchain.chat_models import ChatOpenAI
-import openai
 
-API_KEY = "sk-abcdefgh"
-
-def fetch(request):
-    ChatOpenAI(openai_api_key=API_KEY)
-    print("OK?")
+def fetch(request, env):
+    ChatOpenAI(openai_api_key=env.API_KEY)
+    print("Constructed OpenAI object")
 
     return Response.new("hello world")
+
