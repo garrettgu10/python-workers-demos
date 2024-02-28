@@ -1,4 +1,4 @@
 aiohttp
 ssl
-langchain==0.0.339
-openai==0.28.1
+langchain
+openai
