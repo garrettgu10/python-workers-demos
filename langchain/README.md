@@ -1,4 +1,4 @@
-# FastAPI Demo
+# Langchain Demo
 
 Warning: Python support in Workers is experimental and things will break. This
 demo is meant for reference only right now; you should be prepared to update
@@ -14,4 +14,11 @@ $ wrangler -v
 Now, if you run `wrangler dev` within this directory, it should use the config
 in `wrangler.toml` to run the demo. 
 
-You can also run `wrangler deploy` to deploy the demo. 
+This demo uses a [Workers secret](https://developers.cloudflare.com/workers/configuration/secrets/)
+to configure the API key. Before deployment you must set this key using the
+Wrangler CLI: 
+```
+$ wrangler secret put API_KEY
+```
+
+You can now run `wrangler deploy` to deploy the demo. 

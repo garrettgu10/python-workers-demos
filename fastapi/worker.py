@@ -1,7 +1,7 @@
-async def fetch(request):
+async def fetch(request, env):
     import asgi
 
-    return await asgi.fetch(app, request)
+    return await asgi.fetch(app, request, env)
 
 
 def test():
