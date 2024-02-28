@@ -10,7 +10,7 @@ def test():
 
 # Set up fastapi app
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from pydantic import BaseModel
 
 
@@ -22,6 +22,10 @@ app = my_awesome_api
 async def root():
     return {"message": "Hello World"}
 
+@my_awesome_api.get("/env")
+async def root(req: Request):
+    env = req.scope["env"]
+    return {"message": env.API_KEY}
 
 @my_awesome_api.get("/route")
 async def root():
