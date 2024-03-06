@@ -1,4 +1,4 @@
 from js import Response
 
-async def fetch(request, env):
+async def on_fetch(request, env):
     return Response.new("Hello world!")
